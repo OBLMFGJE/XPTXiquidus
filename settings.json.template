@@ -5,18 +5,18 @@
 */
 {
   // name your instance!
-  "title": "CIQUIDUS",
+  "title": "PLATINUMBAR XPTX",
 
   "address": "127.0.0.1:3001",
 
   // coin name
-  "coin": "Chaincoin",
+  "coin": "Platinumbar",
 
   // coin symbol
-  "symbol": "CHC",
+  "symbol": "XPTX",
 
   // logo
-  "logo": "/images/chain_dark-128x128.png",
+  "logo": "public/favicon.ico",
 
   // favicon
   "favicon": "public/favicon.ico",
@@ -26,7 +26,7 @@
   //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
   //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
   // theme (see /public/themes for available themes)
-  "theme": "Slate",
+  "theme": "Readable",
 
   // port to listen for requests on.
   "port" : 3001,
@@ -47,13 +47,13 @@
   // wallet settings
   "wallet": {
     "host": "localhost",
-    "port": 11995,
-    "user": "chaincoinrpc",
+    "port": 18994,
+    "user": "xptxrpc",
     "pass": "123gfjk3R3pCCVjHtbRde2s5kzdf233sa"
   },
 
   // confirmations
-  "confirmations": 40,
+  "confirmations": 90,
 
   // language settings
   "locale": "locale/en.json",
@@ -67,9 +67,9 @@
     "facebook": false,
     "googleplus": false,
     "bitcointalk": false,
-    "website": false,
+    "website": true,
     "slack": false,
-    "github": false,
+    "github": true,
     "search": true,
     "movement": true,
     "network": true
@@ -78,29 +78,29 @@
   // index page (valid options for difficulty are POW, POS or Hybrid)
   "index": {
     "show_hashrate": true,
-    "difficulty": "POW",
+    "difficulty": "Hybrid",
     "last_txs": 100
   },
 
   // ensure links on API page are valid
   "api": {
-    "blockindex": 1337,
-    "blockhash": "00000000001b8c30360db57b575b3c2bf668b0ed50683f567afd47ae1773efb8",
-    "txhash": "285feead54e322aa69f649c4078766171df358a12f5f1517d61f303780e25511",
-    "address": "CaxX1HVWzbQ516w61XbtHR63vNmp2mvLMZ"
+    "blockindex": 1,
+    "blockhash": "00000034f6635b50d726e0a4ea18b8652c25cf652e699a955428c0ab1f65f68b",
+    "txhash": "7f8a0ef67fb41783989e00551a4101a511bc07b96b26eaa048d1596cb0ee91f6",
+    "address": "PRzvFwqCWpfMNNEa5qTmAoUhhZiq9zf1fT"
   },
 
   // market settings
   //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex, coinexchange
   //default market is loaded by default and determines last price in header
   "markets": {
-    "coin": "CHC",
+    "coin": "XPTX",
     "exchange": "BTC",
-    "enabled": ["cryptopia"],
-    "cryptopia_id": "2186",
+    "enabled": ["cryptopia", "yobit"],
+    "cryptopia_id": "5292",
     "ccex_key" : "Get-Your-Own-Key",
     "coinexchange_id": "18",
-    "default": "cryptopia"
+    "default": "yobit"
   },
 
   // richlist/top100 settings
@@ -114,23 +114,23 @@
   // low flag: greater than this value flagged yellow
   // high flag: greater than this value flagged red
   "movement": {
-    "min_amount": 100,
-    "low_flag": 1000,
-    "high_flag": 5000
+    "min_amount": 1,
+    "low_flag": 10,
+    "high_flag": 1000
   },
 
   // twitter, facebook, googleplus, bitcointalk, github, slack, website
-  "twitter": "suprnurd",
+  "twitter": "platinumbarxptx",
   "facebook": "yourfacebookpage",
   "googleplus": "yourgooglepluspage",
   "bitcointalk": "yourbitcointalktopicvalue",
-  "github": "yourgithubusername/yourgithubrepo",
+  "github": "xptx/xptx",
   "slack": "yourfullslackinviteurl",
-  "website": "yourfullwebsiteurl",
+  "website": "http://platinumbar.io",
 
   //genesis
-  "genesis_tx": "fa6ef9872494fa9662cf0fecf8c0135a6932e76d7a8764e1155207f3205c7c88",
-  "genesis_block": "00000f639db5734b2b861ef8dbccc33aebd7de44d13de000a12d093bcc866c64",
+  "genesis_tx": "224206c735b6abebb25c9b49c428569a8f5f58ba616df89be48914acef74aac0",
+  "genesis_block": "00000034f6635b50d726e0a4ea18b8652c25cf652e699a955428c0ab1f65f68b",
 
   //heavy (enable/disable additional heavy features)
   "heavy": false,
@@ -139,7 +139,7 @@
   "txcount": 100,
 
   //show total sent & received on address page (set false if PoS)
-  "show_sent_received": true,
+  "show_sent_received": false,
 
   // how to calculate current coin supply
   // COINBASE : total sent from coinbase (PoW)
@@ -147,12 +147,12 @@
   // HEAVY: retreive from heavys getsupply api call
   // BALANCES : total of all address balances
   // TXOUTSET : retreive from gettxoutsetinfo api call
-  "supply": "TXOUTSET",
+  "supply": "BALANCES",
 
   // how to acquire network hashrate
   // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
   // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
-  "nethash": "getnetworkhashps",
+  "nethash": "netmhashps",
 
   // nethash unitd: sets nethash API return units
   // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)

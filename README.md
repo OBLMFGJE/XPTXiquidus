@@ -1,14 +1,9 @@
-Ciquidus Alpha - 1.7.2
+XPTXiquidus Alpha - 1.7.2
 ================
 
-The Chaincoin block explorer.
+The Platinumbar block explorer.
 
 This project is a fork of [Iquidus Explorer](https://github.com/iquidus/explorer) so massive thanks go out to Luke Williams for his code! Thank you!!!
-
-### See it in action
-
-*  [explorer.chaincoin.org](https://explorer.chaincoin.org)
-
 
 ### Requires
 
@@ -36,7 +31,7 @@ Create user with read/write access:
 
 ### Get the source
 
-    git clone https://github.com/suprnurd/ciquidus explorer
+    git clone https://github.com/suprnurd/XPTXiquidus explorer
 
 ### Install node modules
 
@@ -93,6 +88,8 @@ sync.js (located in scripts/) is used for updating the local databases. This scr
     */1 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/sync.js index update > /dev/null 2>&1
     */2 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/sync.js market > /dev/null 2>&1
     */5 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/peers.js > /dev/null 2>&1
+    
+Please note, on centos make sure you use node instead of nodejs above.   
 
 forcesync.sh and forcesynclatest.sh (located in scripts/) can be used to force the explorer to sync at the specified block heights
 
@@ -135,6 +132,7 @@ Where [SIZE] is an integer higher than the default.
 
 ### License
 
+Copyright (c) 2019, Platinumbar XPTX
 Copyright (c) 2017, The Chaincoin Community  
 Copyright (c) 2015, Iquidus Technology  
 Copyright (c) 2015, Luke Williams  
